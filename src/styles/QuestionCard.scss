@@ -1,0 +1,58 @@
+.question-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+
+    &.visited {
+        background-color: gray;
+      }
+    
+      &.correct {
+        background-color: green;
+      }
+    
+      &.incorrect {
+        background-color: red;
+      }
+  
+    .card-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+  
+    &.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+  
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .card-front {
+        background: rebeccapurple;
+        color: white;
+        border: 2px solid goldenrod;
+      }
+      
+      .card-back {
+        background: goldenrod;
+        color: black;
+        border: 2px solid rebeccapurple;
+        transform: rotateY(180deg);
+      }
+      
+  }
+  

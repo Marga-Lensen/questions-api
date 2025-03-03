@@ -1,0 +1,195 @@
+.game-container {
+  background-color: #121212;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.question-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px; /* Allow more columns */
+}
+
+
+/* .game-container {
+  background-color: #121212;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.question-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+} */
+
+
+/* previous styles, light mode (?)*/
+/* .game-container {
+  background-color: #f0f8ff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}  */
+
+/* for testing... app.css works
+.card {
+  width: 300px;
+  height: 180px;
+  background: rebeccapurple;
+  color: white;
+  border: 2px solid goldenrod;
+} */
+
+ /* styles from Questions.scss in css format for testing; works but not well */
+/* .card {
+  width: 300px;
+  height: 180px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  border: 2px solid goldenrod;
+  box-shadow: 4px 4px 10px rgba(218, 165, 32, 0.5); // Goldenrod shadow 
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  border-radius: 10px;
+}
+
+.card-front {
+  background-color: rebeccapurple;
+  color: white;
+}
+
+.card-back {
+  background-color: goldenrod;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+.card button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  border: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.card button:hover {
+  background-color: lightgray;
+}
+
+.visited {
+  border: 2px solid lightblue;
+  box-shadow: 4px 4px 12px rgba(173, 216, 230, 0.6);
+}
+
+.correct {
+  border-color: limegreen;
+  box-shadow: 4px 4px 12px rgba(50, 205, 50, 0.6);
+}
+
+.incorrect {
+  border-color: crimson;
+  box-shadow: 4px 4px 12px rgba(220, 20, 60, 0.6);
+} 
+/* end of styles for QuestionCard component */
+
+button {
+  background-color: #4CAF50; /* Green */
+  background-color: #21275c; 
+  color: rgb(230, 223, 223);
+  color: whitesmoke;
+  text-shadow: 1px 2px 3px #121212;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: 1px solid rgb(7, 16, 46);
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+button:hover {
+  background-color: #45a049;
+  background-color: rgb(26, 50, 122);
+  border: #21275c;
+}
+/* Position buttons at the bottom */
+.card-front button,
+.card-back button {
+  /* margin-top: auto; Push buttons to the bottom of the card */
+  align-self: flex-end;  /* Align button to the right */
+  margin-bottom: 20px; /* Optional margin to prevent button from sticking to the bottom */
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #222;
+  color: rgb(142, 158, 187);
+
+  position: relative; /* Normal positioning to avoid overlap */
+  position: sticky; /* Normal positioning to avoid overlap */
+}
+
+.footer img {
+  width: 50px;
+  border-radius: 50%;
+}
+.footer p {
+  font-size: small;
+  font-weight: bold;
+  color: rgb(223, 204, 157);
+  text-shadow: 2px 3px black;
+}

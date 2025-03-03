@@ -1,0 +1,106 @@
+.card {
+  width: 280px;
+  height: 380px;
+  // background-color: gray;
+  perspective: 1000px;
+  margin: 15px;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid goldenrod;
+  // border: 2px solid transparent;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px goldenrod;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 6px 6px 15px rgba(209, 185, 118, 0.8);
+    box-shadow: 4px 4px 15px royalblue;
+    border: 1px solid royalblue;
+
+  }
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, 
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;  /* Stack content vertically */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  box-sizing: border-box;  // // Prevents unwanted overflow
+}
+
+.card-front {
+  background-color: #292727;
+  color: white;
+  text-shadow: 1px 2px  black;
+  // color: rgb(212, 219, 226);
+  // background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+  // background-image: url('https://www.transparenttextures.com/patterns/diagonal-striped-brick.png');
+  // background-image: url('https://www.transparenttextures.com/patterns/ecailles.png');
+  // background-image: url('https://www.transparenttextures.com/patterns/fake-brick.png');
+  background-image: url('https://www.transparenttextures.com/patterns/green-fibers.png');
+  background-size: cover; /* Ensures the texture covers the entire card */
+  background-repeat: repeat; /* Makes sure the pattern repeats if necessary */
+}
+span{
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+  font-size: small;
+  color: royalblue;
+  text-shadow: #292727;
+}
+.card-back {
+  // width: 80%;
+  background-color: #be9837;
+  // opacity: .8;  // NO !!!
+  background-image: url('https://www.transparenttextures.com/patterns/green-fibers.png');
+  color: black;
+  font-weight: bold;
+  transform: rotateY(180deg);
+} 
+
+/* Ensure the buttons stay at the bottom of the card */
+.card-front button,
+.card-back button {
+  position: absolute;
+  bottom: 20px; /* Position button 20px from the bottom */
+  // right: 14%;
+  left: 50%; /* Center the button horizontally */
+  transform: translateX(-50%); /* Offset the button back to the center */
+  width: 80%; /* Optional: makes buttons a little wider */
+  max-width: 200px; /* Optional: limits max width of buttons */
+}
+
+
+
+.visited {
+  filter: grayscale(80%) opacity(60%);
+}
+
+.correct {
+  background-color: #4CAF50;
+}
+
+.incorrect {
+  background-color: #f44336;
+}
